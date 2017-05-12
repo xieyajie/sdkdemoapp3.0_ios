@@ -124,6 +124,8 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(groupBansChanged) name:@"GroupBansChanged" object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUI:) name:@"UpdateGroupDetail" object:nil];
+    
     [self fetchGroupInfo];
 }
 
@@ -360,6 +362,16 @@
     [self.dataSource removeAllObjects];
     [self.dataSource addObjectsFromArray:self.chatGroup.occupants];
     [self refreshScrollView];
+}
+
+- (void)updateUI:(NSNotification *)aNotif
+{
+    id obj = aNotif.object;
+    if (obj && [obj isKindOfClass:[EMGroup class]]) {
+        self.chatGroup = (EMGroup *)obj;
+    }
+    
+    [self reloadDataSource];
 }
 
 #pragma mark - data
@@ -600,7 +612,7 @@
             [weakSelf showHint:NSLocalizedString(@"group.destroyFail", @"dissolution of group failure")];
         }
         else{
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"ExitGroup" object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ExitGroup" object:_chatGroup.groupId];
         }
     } onQueue:nil];
     
@@ -629,7 +641,7 @@
             [weakSelf showHint:NSLocalizedString(@"group.leaveFail", @"exit the group failure")];
         }
         else{
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"ExitGroup" object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ExitGroup" object:_chatGroup.groupId];
         }
     } onQueue:nil];
     

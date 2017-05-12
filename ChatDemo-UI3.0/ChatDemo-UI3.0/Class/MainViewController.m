@@ -795,6 +795,77 @@ static NSString *kGroupName = @"GroupName";
     }
 }
 
+#pragma mark - EMChatManagerMultiDelegate.h
+
+- (void)multiDevicesContactEventDidReceive:(EMMultiDevicesEvent)aEvent
+                                    target:(NSString *)aTarget
+                                       ext:(NSString *)aExt
+{
+    
+    NSString *message = [NSString stringWithFormat:@"%li-%@-%@", (long)aEvent, aTarget, aExt];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"多设备通知" message:message delegate:self cancelButtonTitle:NSLocalizedString(@"ok", @"OK") otherButtonTitles:nil, nil];
+    [alertView show];
+    
+    switch (aEvent) {
+        case EMMultiDevicesEventContactRemoved:
+            [_contactsVC reloadDataSource];
+            break;
+        case EMMultiDevicesEventContactAccepted:
+            [[ApplyViewController shareController] removeApply:aTarget];
+            [self setupUntreatedApplyCount];
+            [_contactsVC reloadDataSource];
+            break;
+        case EMMultiDevicesEventContactDeclined:
+            [[ApplyViewController shareController] removeApply:aTarget];
+            [self setupUntreatedApplyCount];
+            [_contactsVC reloadApplyView];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)multiDevicesGroupEventDidReceive:(EMMultiDevicesEvent)aEvent
+                                  target:(NSString *)aTarget
+                                     ext:(NSString *)aExt
+{
+    NSString *message = [NSString stringWithFormat:@"%li-%@-%@", (long)aEvent, aTarget, aExt];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"多设备通知" message:message delegate:self cancelButtonTitle:NSLocalizedString(@"ok", @"OK") otherButtonTitles:nil, nil];
+    [alertView show];
+    
+    switch (aEvent) {
+        case EMMultiDevicesEventGroupInviteDecline:
+        case EMMultiDevicesEventGroupApplyDecline:
+            [[ApplyViewController shareController] removeApply:aTarget];
+            [self setupUntreatedApplyCount];
+            [_contactsVC reloadApplyView];
+            break;
+        case EMMultiDevicesEventGroupCreate:
+        case EMMultiDevicesEventGroupJoin:
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadGroupList" object:nil];
+            break;
+        case EMMultiDevicesEventGroupLeave:
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ExitGroup" object:aTarget];
+            break;
+        case EMMultiDevicesEventGroupApplyAccept:
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateGroupDetail" object:nil];
+            [[ApplyViewController shareController] removeApply:aTarget];
+            [self setupUntreatedApplyCount];
+            [_contactsVC reloadApplyView];
+            break;
+        case EMMultiDevicesEventGroupInviteAccept:
+            [[ApplyViewController shareController] removeApply:aTarget];
+            [self setupUntreatedApplyCount];
+            [_contactsVC reloadApplyView];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadGroupList" object:nil];
+            break;
+            
+        default:
+            break;
+    }
+}
+
 #pragma mark - public
 
 - (void)jumpToChatList

@@ -285,6 +285,24 @@ static ApplyViewController *controller = nil;
     }
 }
 
+- (void)removeApply:(NSString *)target
+{
+    if ([target length] == 0) {
+        return;
+    }
+    
+    for (ApplyEntity *entity in self.dataSource) {
+        if ([entity.applicantUsername isEqualToString:target] || [entity.groupId isEqualToString:target]) {
+            NSDictionary *loginInfo = [[[EaseMob sharedInstance] chatManager] loginInfo];
+            NSString *loginName = [loginInfo objectForKey:kSDKUsername];
+            [[InvitationManager sharedInstance] removeInvitation:entity loginUser:loginName];
+            [self.dataSource removeObject:entity];
+            [self.tableView reloadData];
+            break;
+        }
+    }
+}
+
 - (void)loadDataSourceFromLocalDB
 {
     [_dataSource removeAllObjects];
