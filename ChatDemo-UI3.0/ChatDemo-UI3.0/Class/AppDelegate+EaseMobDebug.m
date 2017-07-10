@@ -13,7 +13,22 @@
 @implementation AppDelegate (EaseMobDebug)
 
 
--(BOOL)isSpecifyServer{
+-(BOOL)isSpecifyServer {
+    
+//    NSDictionary *dic = @{kSDKAppKey:@"easemobdemo#chatdemoui",
+//                          kSDKApnsCertName:@"chatdemoui_dev",
+//                          kSDKServerApi:@"172.17.18.220:8080",
+//                          kSDKServerChat:@"172.17.2.224",
+//                          kSDKServerGroupDomain:@"conference.easemob.com",
+//                          kSDKServerChatDomain:@"easemob.com",
+//                          kSDKServerChatPort:@"5222"};
+//    
+//    [[EaseMob sharedInstance] registerPrivateServerWithParams:dic];
+//    
+//    
+//    return YES;
+    
+    
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
     NSNumber *specifyServer = [ud objectForKey:@"identifier_enable"];

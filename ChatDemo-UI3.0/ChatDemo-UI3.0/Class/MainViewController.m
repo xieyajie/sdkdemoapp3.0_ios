@@ -807,15 +807,15 @@ static NSString *kGroupName = @"GroupName";
     [alertView show];
     
     switch (aEvent) {
-        case EMMultiDevicesEventContactRemoved:
+        case EMMultiDevicesEventContactRemove:
             [_contactsVC reloadDataSource];
             break;
-        case EMMultiDevicesEventContactAccepted:
+        case EMMultiDevicesEventContactAccept:
             [[ApplyViewController shareController] removeApply:aTarget];
             [self setupUntreatedApplyCount];
             [_contactsVC reloadDataSource];
             break;
-        case EMMultiDevicesEventContactDeclined:
+        case EMMultiDevicesEventContactDecline:
             [[ApplyViewController shareController] removeApply:aTarget];
             [self setupUntreatedApplyCount];
             [_contactsVC reloadApplyView];
@@ -835,7 +835,6 @@ static NSString *kGroupName = @"GroupName";
     [alertView show];
     
     switch (aEvent) {
-        case EMMultiDevicesEventGroupInviteDecline:
         case EMMultiDevicesEventGroupApplyDecline:
             [[ApplyViewController shareController] removeApply:aTarget];
             [self setupUntreatedApplyCount];
@@ -853,12 +852,6 @@ static NSString *kGroupName = @"GroupName";
             [[ApplyViewController shareController] removeApply:aTarget];
             [self setupUntreatedApplyCount];
             [_contactsVC reloadApplyView];
-            break;
-        case EMMultiDevicesEventGroupInviteAccept:
-            [[ApplyViewController shareController] removeApply:aTarget];
-            [self setupUntreatedApplyCount];
-            [_contactsVC reloadApplyView];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadGroupList" object:nil];
             break;
             
         default:
