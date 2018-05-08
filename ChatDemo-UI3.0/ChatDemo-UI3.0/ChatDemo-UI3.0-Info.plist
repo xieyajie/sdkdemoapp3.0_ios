@@ -78,9 +78,9 @@
 	<string>环信Demo需要访问您的相册</string>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>voip</string>
 		<string>audio</string>
 		<string>remote-notification</string>
-		<string>voip</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

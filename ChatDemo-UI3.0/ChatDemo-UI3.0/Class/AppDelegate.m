@@ -20,6 +20,10 @@
 #import <Bugly/Bugly.h>
 #import <UserNotifications/UserNotifications.h>
 
+#if DEMO_CALL == 1
+#import "EMCallKitManager.h"
+#endif
+
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @end
@@ -76,6 +80,11 @@ didFinishLaunchingWithOptions:launchOptions
                  otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
 
     [self.window makeKeyAndVisible];
+    
+#if DEMO_CALL == 1
+    [EMCallKitManager sharedManager];
+#endif
+    
     return YES;
 }
 
