@@ -35,6 +35,7 @@
     UIMenuItem *_deleteMenuItem;
     UIMenuItem *_transpondMenuItem;
     UIMenuItem *_recallItem;
+    UIMenuItem *_callItem;
 }
 
 @property (nonatomic) BOOL isPlayingAudio;
@@ -670,6 +671,22 @@
     self.menuIndexPath = nil;
 }
 
+- (void)transpondInConversationMenuAction:(id)sender
+{
+    if (self.menuIndexPath && self.menuIndexPath.row > 0) {
+        id<IMessageModel> model = [self.dataArray objectAtIndex:self.menuIndexPath.row];
+        
+        EMMessage *oldMsg = model.message;
+        EMMessage *message = [EaseSDKHelper getTextMessage:model.text to:self.conversation.conversationId messageType:(EMChatType)self.conversation.type messageExt:oldMsg.ext];
+//        __weak typeof(self) weakself = self;
+        [[EMClient sharedClient].chatManager sendMessage:message progress:nil completion:^(EMMessage *message, EMError *error) {
+            //
+        }];
+    }
+    
+    self.menuIndexPath = nil;
+}
+
 #pragma mark - NSNotification
 
 - (void)exitChat
@@ -784,6 +801,13 @@
     id<IMessageModel> model = [self.dataArray objectAtIndex:self.menuIndexPath.row];
     if (model.isSender) {
         [items addObject:_recallItem];
+    }
+    
+    if (self.conversation.type != EMConversationTypeChat) {
+        if (_callItem == nil) {
+            _callItem = [[UIMenuItem alloc] initWithTitle:@"群内转发" action:@selector(transpondInConversationMenuAction:)];
+        }
+        [items addObject:_callItem];
     }
     
     [self.menuController setMenuItems:items];

@@ -66,7 +66,7 @@ static DemoCallManager *callManager = nil;
     self.callCenter = nil;
     [[EMClient sharedClient].chatManager removeDelegate:self];
     [[EMClient sharedClient].callManager removeDelegate:self];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:KNOTIFICATION_CALL object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:KNOTIFICATION_MAKE1V1CALL object:nil];
 }
 
 #pragma mark - private
@@ -95,7 +95,7 @@ static DemoCallManager *callManager = nil;
     }
     [[EMClient sharedClient].callManager setCallOptions:options];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(makeCall:) name:KNOTIFICATION_CALL object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(makeCall:) name:KNOTIFICATION_MAKE1V1CALL object:nil];
     
     __weak typeof(self) weakSelf = self;
     self.callCenter = [[CTCallCenter alloc] init];
