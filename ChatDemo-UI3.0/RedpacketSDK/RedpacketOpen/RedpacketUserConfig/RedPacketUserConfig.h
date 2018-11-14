@@ -13,7 +13,7 @@
  *  @description: 红包用户配置服务
  *  1.获取当前用户的信息
  *  2.注册红包服务
- *  3.检测用户登陆状态
+ *  3.检测用户登录状态
  */
 
 @interface RedPacketUserConfig : NSObject

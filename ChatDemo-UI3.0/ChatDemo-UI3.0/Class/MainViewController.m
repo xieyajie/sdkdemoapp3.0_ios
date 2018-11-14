@@ -508,7 +508,7 @@ static NSString *kGroupName = @"GroupName";
     }
 }
 
-#pragma mark - IChatManagerDelegate 登陆回调（主要用于监听自动登录是否成功）
+#pragma mark - IChatManagerDelegate 登录回调（主要用于监听自动登录是否成功）
 
 - (void)didLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error
 {

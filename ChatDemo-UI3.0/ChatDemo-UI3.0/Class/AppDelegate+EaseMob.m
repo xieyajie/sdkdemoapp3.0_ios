@@ -112,7 +112,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     BOOL isAutoLogin = [[[EaseMob sharedInstance] chatManager] isAutoLoginEnabled];
     BOOL loginSuccess = [notification.object boolValue];
     
-    if (isAutoLogin || loginSuccess) {//登陆成功加载主窗口控制器
+    if (isAutoLogin || loginSuccess) {//登录成功加载主窗口控制器
         //加载申请通知的数据
         [[ApplyViewController shareController] loadDataSourceFromLocalDB];
         if (self.mainController == nil) {
@@ -124,7 +124,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         // 环信UIdemo中有用到Parse，您的项目中不需要添加，可忽略此处
         [self initParse];
     }
-    else{//登陆失败加载登陆页面控制器
+    else{//登录失败加载登录页面控制器
         self.mainController = nil;
         
         LoginViewController *loginController = [[LoginViewController alloc] init];

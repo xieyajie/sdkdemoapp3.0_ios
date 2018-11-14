@@ -71,7 +71,7 @@ YZHRedpacketBridgeDelegate>
 }
 
 #pragma mark - YZHRedpacketBridgeDataSource
-/** 获取当前用户登陆信息，YZHRedpacketBridgeDataSource */
+/** 获取当前用户登录信息，YZHRedpacketBridgeDataSource */
 - (RedpacketUserInfo *)redpacketUserInfo
 {
     RedpacketUserInfo *userInfo = [RedpacketUserInfo new];

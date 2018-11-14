@@ -126,11 +126,11 @@
     }
 }
 
-//点击登陆后的操作
+//点击登录后的操作
 - (void)loginWithUsername:(NSString *)username password:(NSString *)password
 {
     [self showHudInView:self.view hint:NSLocalizedString(@"login.ongoing", @"Is Login...")];
-    //异步登陆账号
+    //异步登录账号
     [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:username
                                                         password:password
                                                       completion:
@@ -148,7 +148,7 @@
              //获取群组列表
              [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
              
-             //发送自动登陆状态通知
+             //发送自动登录状态通知
              [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_LOGINCHANGE object:@YES];
              
              //保存最近一次登录用户名
@@ -195,11 +195,11 @@
             [[EaseMob sharedInstance].chatManager setApnsNickname:nameTextField.text];
         }
     }
-    //登陆
+    //登录
     [self loginWithUsername:_usernameTextField.text password:_passwordTextField.text];
 }
 
-//登陆账号
+//登录账号
 - (IBAction)doLogin:(id)sender {
     if (![self isEmpty]) {
         [self.view endEditing:YES];
