@@ -8,8 +8,6 @@
 
 #import "ConfInviteUsersViewController.h"
 
-#import "Masonry.h"
-
 #import "RealtimeSearchUtil.h"
 #import "DemoConfManager.h"
 #import "ConfInviteUserCell.h"
@@ -266,6 +264,12 @@
 {
     NSMutableArray *retNames = [[NSMutableArray alloc] init];
     [retNames addObjectsFromArray:aAllUsers];
+    
+    NSString *loginName = [[EMClient sharedClient].currentUsername lowercaseString];
+    if ([retNames containsObject:loginName]) {
+        [retNames removeObject:loginName];
+    }
+    
     for (NSString *name in self.excludeUsers) {
         if ([retNames containsObject:name]) {
             [retNames removeObject:name];
@@ -297,7 +301,8 @@
             EMError *error = nil;
             EMGroup *group = [[EMClient sharedClient].groupManager getGroupSpecificationFromServerWithId:weakSelf.gorcId error:&error];
             if (!error) {
-                [weakSelf.dataArray addObjectsFromArray:[weakSelf _getInvitableUsers:@[group.owner]]];
+                NSArray *owners = [weakSelf _getInvitableUsers:@[group.owner]];
+                [weakSelf.dataArray addObjectsFromArray:owners];
                 
                 NSArray *admins = [weakSelf _getInvitableUsers:group.adminList];
                 [weakSelf.dataArray addObjectsFromArray:admins];
@@ -340,7 +345,8 @@
             EMError *error = nil;
             EMChatroom *chatroom = [[EMClient sharedClient].roomManager getChatroomSpecificationFromServerWithId:weakSelf.gorcId error:&error];
             if (!error) {
-                [weakSelf.dataArray addObjectsFromArray:[weakSelf _getInvitableUsers:@[chatroom.owner]]];
+                NSArray *owners = [weakSelf _getInvitableUsers:@[chatroom.owner]];
+                [weakSelf.dataArray addObjectsFromArray:owners];
                 
                 NSArray *admins = [weakSelf _getInvitableUsers:chatroom.adminList];
                 [weakSelf.dataArray addObjectsFromArray:admins];

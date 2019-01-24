@@ -66,10 +66,10 @@
     }];
     
     self.roleButton = [[EMButton alloc] initWithTitle:@"上麦" target:self action:@selector(roleAction)];
-    [self.roleButton setTitle:@"下麦" forState:UIControlStateSelected];
     [self.roleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.roleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     [self.roleButton setImage:[UIImage imageNamed:@"role_white"] forState:UIControlStateNormal];
+    [self.roleButton setTitle:@"下麦" forState:UIControlStateSelected];
+    [self.roleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     [self.roleButton setImage:[UIImage imageNamed:@"role_white"] forState:UIControlStateSelected];
     [self.view addSubview:self.roleButton];
     [self.roleButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -87,13 +87,13 @@
         self.switchCameraButton.enabled = NO;
         self.microphoneButton.enabled = NO;
         self.videoButton.enabled = NO;
+        self.vkbpsButton.enabled = NO;
     }
 }
 
 - (void)_updateViewsAfterPubWithEnableVideo:(BOOL)aEnableVideo
                                       error:(EMError *)aError
 {
-    self.roleButton.hidden = NO;
     if (!aError) {
         self.microphoneButton.enabled = YES;
         
@@ -102,8 +102,16 @@
         self.switchCameraButton.enabled = aEnableVideo;
 
         self.roleButton.selected = YES;
+        self.vkbpsButton.enabled = YES;
     } else {
         self.roleButton.selected = NO;
+        self.vkbpsButton.enabled = NO;
+    }
+    
+    if (self.isCreater) {
+        self.roleButton.hidden = YES;
+    } else {
+        self.roleButton.hidden = NO;
     }
 }
 
@@ -123,6 +131,7 @@
         self.switchCameraButton.enabled = NO;
         self.microphoneButton.enabled = NO;
         self.videoButton.enabled = NO;
+        self.vkbpsButton.enabled = NO;
         
         [self removeStreamWithId:self.pubStreamId];
         self.pubStreamId = nil;
@@ -215,10 +224,10 @@
     
     __weak typeof(self) weakself = self;
     [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"请输入视频最大码率";
         if (weakself.maxVkbps > 0) {
             textField.text = @(weakself.maxVkbps).stringValue;
         }
-        textField.placeholder = @"请输入视频最大码率";
     }];
     
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -295,7 +304,7 @@
         return;
     }
     
-    self.localViewTmpFrame = CGRectMake(item.videoView.frame.origin.x, item.videoView.frame.origin.y, item.videoView.frame.size.width, item.videoView.frame.size.height);
+    self.floatViewFromFrame = CGRectMake(item.videoView.frame.origin.x, item.videoView.frame.origin.y, item.videoView.frame.size.width, item.videoView.frame.size.height);
     self.floatingView = item.videoView;
     [self.floatingView removeFromSuperview];
     
