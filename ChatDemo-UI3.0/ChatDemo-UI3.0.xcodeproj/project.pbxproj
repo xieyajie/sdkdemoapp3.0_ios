@@ -52,6 +52,10 @@
 		3A32EFE621D619D900B1F90E /* EMPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A32EFDC21D619D800B1F90E /* EMPrivacyViewController.m */; };
 		3A32EFE721D619D900B1F90E /* EMGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A32EFDE21D619D800B1F90E /* EMGeneralViewController.m */; };
 		3A32EFE821D619D900B1F90E /* EMBlacklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A32EFDF21D619D900B1F90E /* EMBlacklistViewController.m */; };
+		3A42E45921F9A14E00374C6C /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E45821F9A14E00374C6C /* WebRTC.framework */; };
+		3A42E45A21F9A14E00374C6C /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E45821F9A14E00374C6C /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A42E45E21F9A16F00374C6C /* Hyphenate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E45D21F9A16F00374C6C /* Hyphenate.framework */; };
+		3A42E45F21F9A16F00374C6C /* Hyphenate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E45D21F9A16F00374C6C /* Hyphenate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A4BD04821E45AE500800BD4 /* EMRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BD04421E45AE500800BD4 /* EMRefreshTableViewController.m */; };
 		3A4BD04921E45AE500800BD4 /* EMRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BD04621E45AE500800BD4 /* EMRefreshViewController.m */; };
 		3A595FAC1D6DBBD100504DB3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A595FAB1D6DBBD100504DB3 /* CoreTelephony.framework */; };
@@ -62,8 +66,6 @@
 		3A66256321C0C3500004F853 /* EMQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A66256221C0C3500004F853 /* EMQRCodeViewController.m */; };
 		3A6764B41E5D2C6800ABF196 /* GroupSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6764B31E5D2C6800ABF196 /* GroupSettingViewController.m */; };
 		3A6764B71E5D3FB300ABF196 /* ChatroomDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6764B61E5D3FB300ABF196 /* ChatroomDetailViewController.m */; };
-		3A6FEF7A218072CB0092EFA0 /* Hyphenate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9A2A4B21709EF100AC4689 /* Hyphenate.framework */; };
-		3A6FEF7B218072CB0092EFA0 /* Hyphenate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9A2A4B21709EF100AC4689 /* Hyphenate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A807B061D9511B1004D18CB /* TTGlobalUICommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A807B051D9511B1004D18CB /* TTGlobalUICommon.m */; };
 		3A807B0F1D951301004D18CB /* EMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A807B0E1D951301004D18CB /* EMNavigationController.m */; };
 		3A9A29D321709ECC00AC4689 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A28B221709ECB00AC4689 /* UIViewController+HUD.m */; };
@@ -211,8 +213,7 @@
 		3AB6B582215CD1DF003B310F /* kbps_gray@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6B57A215CD1DF003B310F /* kbps_gray@3x.png */; };
 		3AB6B583215CD1DF003B310F /* kbps_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6B57B215CD1DF003B310F /* kbps_white@2x.png */; };
 		3AB6B584215CD1DF003B310F /* role_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6B57C215CD1DF003B310F /* role_white@2x.png */; };
-		3AC0B88521F85E41008B98A3 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC0B88421F85E40008B98A3 /* WebRTC.framework */; };
-		3AC0B88621F85E41008B98A3 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC0B88421F85E40008B98A3 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3AC0B88621F85E41008B98A3 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3AC23B3321E87F4D00EC603C /* EMGlobalVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC23B1A21E87F4D00EC603C /* EMGlobalVariables.m */; };
 		3AC23B4621E87F6300EC603C /* scanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC23B3421E87F6200EC603C /* scanLine@2x.png */; };
 		3AC23B4721E87F6300EC603C /* close_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC23B3521E87F6200EC603C /* close_white@3x.png */; };
@@ -556,8 +557,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3A6FEF7B218072CB0092EFA0 /* Hyphenate.framework in Embed Frameworks */,
-				3AC0B88621F85E41008B98A3 /* WebRTC.framework in Embed Frameworks */,
+				3AC0B88621F85E41008B98A3 /* (null) in Embed Frameworks */,
+				3A42E45F21F9A16F00374C6C /* Hyphenate.framework in Embed Frameworks */,
+				3A42E45A21F9A14E00374C6C /* WebRTC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +652,8 @@
 		3A32EFE021D619D900B1F90E /* EMAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAccountViewController.h; sourceTree = "<group>"; };
 		3A386F131DE557BA000F3D8E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3A386F141DE557BA000F3D8E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		3A42E45821F9A14E00374C6C /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = "../../rtc-ios/RtcSDK/RtcSDK/3rdParth/webrtc/lib71/WebRTC.framework"; sourceTree = "<group>"; };
+		3A42E45D21F9A16F00374C6C /* Hyphenate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Hyphenate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4BD04421E45AE500800BD4 /* EMRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRefreshTableViewController.m; sourceTree = "<group>"; };
 		3A4BD04521E45AE500800BD4 /* EMRefreshViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRefreshViewController.h; sourceTree = "<group>"; };
 		3A4BD04621E45AE500800BD4 /* EMRefreshViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRefreshViewController.m; sourceTree = "<group>"; };
@@ -932,7 +936,6 @@
 		3A9A29D021709ECC00AC4689 /* EaseUI-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EaseUI-Prefix.pch"; sourceTree = "<group>"; };
 		3A9A29D121709ECC00AC4689 /* EaseUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseUI.m; sourceTree = "<group>"; };
 		3A9A29D221709ECC00AC4689 /* EaseUIResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseUIResource.bundle; sourceTree = "<group>"; };
-		3A9A2A4B21709EF100AC4689 /* Hyphenate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Hyphenate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA412E61DDEDB2600317D72 /* EMSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSearchResultController.h; sourceTree = "<group>"; };
 		3AA412E71DDEDB2600317D72 /* EMSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSearchResultController.m; sourceTree = "<group>"; };
 		3AADCD1D215B32EC00B738BB /* grid_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid_gray@2x.png"; sourceTree = "<group>"; };
@@ -1397,7 +1400,6 @@
 				3A595FAC1D6DBBD100504DB3 /* CoreTelephony.framework in Frameworks */,
 				3AB62A131D926375000776F0 /* libbz2.tbd in Frameworks */,
 				921C6A9E1D2A841600D8257F /* CoreMotion.framework in Frameworks */,
-				3AC0B88521F85E41008B98A3 /* WebRTC.framework in Frameworks */,
 				D29A6BB61B7209C8002324BB /* Social.framework in Frameworks */,
 				D29A6BB51B7209C1002324BB /* Accounts.framework in Frameworks */,
 				C035E8151AEA40F400283EE9 /* CoreData.framework in Frameworks */,
@@ -1410,7 +1412,6 @@
 				902DEC551931D934006CA75E /* libresolv.dylib in Frameworks */,
 				3C3527451931D37900385240 /* SystemConfiguration.framework in Frameworks */,
 				90F1BED51930495800121AEC /* MobileCoreServices.framework in Frameworks */,
-				3A6FEF7A218072CB0092EFA0 /* Hyphenate.framework in Frameworks */,
 				D29A6BB21B72098D002324BB /* Bolts.framework in Frameworks */,
 				90F1BED11930493200121AEC /* libiconv.dylib in Frameworks */,
 				90F1BECF1930492B00121AEC /* AddressBook.framework in Frameworks */,
@@ -1418,6 +1419,8 @@
 				90F1BECB1930491D00121AEC /* libz.dylib in Frameworks */,
 				9091102C192EEA70008A48AA /* UIKit.framework in Frameworks */,
 				D29A6BB31B72098D002324BB /* Parse.framework in Frameworks */,
+				3A42E45E21F9A16F00374C6C /* Hyphenate.framework in Frameworks */,
+				3A42E45921F9A14E00374C6C /* WebRTC.framework in Frameworks */,
 				90911028192EEA70008A48AA /* Foundation.framework in Frameworks */,
 				3A9A29F621709ECC00AC4689 /* libopencore-amrwb.a in Frameworks */,
 				49E4E3A45FCF3BDF071C93C1 /* libPods-ChatDemo-UI3.0.a in Frameworks */,
@@ -2611,8 +2614,8 @@
 		9091101B192EEA70008A48AA = {
 			isa = PBXGroup;
 			children = (
-				3AC0B88421F85E40008B98A3 /* WebRTC.framework */,
-				3A9A2A4B21709EF100AC4689 /* Hyphenate.framework */,
+				3A42E45D21F9A16F00374C6C /* Hyphenate.framework */,
+				3A42E45821F9A14E00374C6C /* WebRTC.framework */,
 				9091102D192EEA70008A48AA /* ChatDemo-UI3.0 */,
 				90911026192EEA70008A48AA /* Frameworks */,
 				90911025192EEA70008A48AA /* Products */,
@@ -3783,7 +3786,6 @@
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/3rdparty/Parse",
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/3rdparty",
 					"\"$(SRCROOT)/../../rtc-ios/RtcSDK/RtcSDK/3rdParth/webrtc/lib71\"",
-					"$(PROJECT_DIR)/ChatDemo-UI3.0/Class/Call",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChatDemo-UI3.0/ChatDemo-UI3.0-Prefix.pch";
@@ -3870,7 +3872,6 @@
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/3rdparty/Parse",
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/3rdparty",
 					"\"$(SRCROOT)/../../rtc-ios/RtcSDK/RtcSDK/3rdParth/webrtc/lib71\"",
-					"$(PROJECT_DIR)/ChatDemo-UI3.0/Class/Call",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChatDemo-UI3.0/ChatDemo-UI3.0-Prefix.pch";
