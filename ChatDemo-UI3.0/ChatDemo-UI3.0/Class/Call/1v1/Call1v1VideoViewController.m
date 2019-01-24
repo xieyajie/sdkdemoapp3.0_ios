@@ -11,7 +11,7 @@
 #import "EMButton.h"
 
 #ifdef DEBUG
-#import "EMCallRecorderPlugin.h"
+//#import "EMCallRecorderPlugin.h"
 #endif
 
 #define TAG_MINVIDEOVIEW_LOCAL 100
@@ -160,7 +160,7 @@
         make.right.equalTo(self.view).offset(-15);
     }];
     
-    self.callSession.localVideoView = [[EMCallLocalView alloc] init];
+    self.callSession.localVideoView = [[EMCallLocalVideoView alloc] init];
     self.callSession.localVideoView.scaleMode = EMCallViewScaleModeAspectFill;
     [self.minVideoView addSubview:self.callSession.localVideoView];
     [self.view bringSubviewToFront:self.minVideoView];
@@ -197,7 +197,7 @@
 - (void)_setupRemoteVideoView
 {
     if (self.callSession.remoteVideoView == nil) {
-        self.callSession.remoteVideoView = [[EMCallRemoteView alloc] init];
+        self.callSession.remoteVideoView = [[EMCallRemoteVideoView alloc] init];
         self.callSession.remoteVideoView.backgroundColor = [UIColor clearColor];
         self.callSession.remoteVideoView.scaleMode = EMCallViewScaleModeAspectFill;
         self.callSession.remoteVideoView.userInteractionEnabled = YES;
@@ -332,59 +332,59 @@
 #ifdef DEBUG
 - (void)takeRemoteVideoPicture
 {
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *filePath = [path stringByAppendingPathComponent:@"HyphenateSDK/image"];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    BOOL isDir = YES;
-    if (![fileManager fileExistsAtPath:filePath isDirectory:&isDir]) {
-        [fileManager createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:nil];
-    }
-    NSTimeInterval time = [[NSDate date] timeIntervalSince1970] * 1000;
-    NSString *fileName = [NSString stringWithFormat:@"%@/%.0f.jpeg", filePath, time];
-    [[EMCallRecorderPlugin sharedInstance] screenCaptureToFilePath:fileName error:nil];
+//    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//    NSString *filePath = [path stringByAppendingPathComponent:@"HyphenateSDK/image"];
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+//    BOOL isDir = YES;
+//    if (![fileManager fileExistsAtPath:filePath isDirectory:&isDir]) {
+//        [fileManager createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:nil];
+//    }
+//    NSTimeInterval time = [[NSDate date] timeIntervalSince1970] * 1000;
+//    NSString *fileName = [NSString stringWithFormat:@"%@/%.0f.jpeg", filePath, time];
+//    [[EMCallRecorderPlugin sharedInstance] screenCaptureToFilePath:fileName error:nil];
 }
 
 - (void)recorderButtonAction
 {
-    self.recorderButton.selected = !self.recorderButton.isSelected;
-
-    if (!self.recorderButton.isSelected) {
-        if (self.recorderButton.tag == 100) {
-            [[EMCallRecorderPlugin sharedInstance]   stopAudioRecordWithCompletion:^(NSString *aFilePath, EMError *aError) {
-                NSLog(@"录制语音路径：%@", aFilePath);
-            }];
-        } else if (self.recorderButton.tag == 200) {
-            NSString *path = [[EMCallRecorderPlugin sharedInstance] stopVideoRecording:nil];
-            NSLog(@"录制音视频路径：%@", path);
-        }
-    } else {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"录制" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-
-        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"录制语音" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            self.recorderButton.tag = 100;
-            [[EMCallRecorderPlugin sharedInstance] startAudioRecordWithCompletion:^(EMError *aError) {
-                //
-            }];
-        }];
-        [alertController addAction:defaultAction];
-
-        UIAlertAction *mixAction = [UIAlertAction actionWithTitle:@"录制视频" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            self.recorderButton.tag = 200;
-            NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-            NSString *filePath = [path stringByAppendingPathComponent:@"HyphenateSDK/video"];
-            NSFileManager *fileManager = [NSFileManager defaultManager];
-            BOOL isDir = YES;
-            if (![fileManager fileExistsAtPath:filePath isDirectory:&isDir]) {
-                [fileManager createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:nil];
-            }
-            [[EMCallRecorderPlugin sharedInstance] startVideoRecordingToFilePath:filePath error:nil];
-        }];
-        [alertController addAction:mixAction];
-
-        [alertController addAction: [UIAlertAction actionWithTitle:@"取消" style: UIAlertActionStyleCancel handler:nil]];
-
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
+//    self.recorderButton.selected = !self.recorderButton.isSelected;
+//
+//    if (!self.recorderButton.isSelected) {
+//        if (self.recorderButton.tag == 100) {
+//            [[EMCallRecorderPlugin sharedInstance]   stopAudioRecordWithCompletion:^(NSString *aFilePath, EMError *aError) {
+//                NSLog(@"录制语音路径：%@", aFilePath);
+//            }];
+//        } else if (self.recorderButton.tag == 200) {
+//            NSString *path = [[EMCallRecorderPlugin sharedInstance] stopVideoRecording:nil];
+//            NSLog(@"录制音视频路径：%@", path);
+//        }
+//    } else {
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"录制" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+//
+//        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"录制语音" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            self.recorderButton.tag = 100;
+//            [[EMCallRecorderPlugin sharedInstance] startAudioRecordWithCompletion:^(EMError *aError) {
+//                //
+//            }];
+//        }];
+//        [alertController addAction:defaultAction];
+//
+//        UIAlertAction *mixAction = [UIAlertAction actionWithTitle:@"录制视频" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            self.recorderButton.tag = 200;
+//            NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//            NSString *filePath = [path stringByAppendingPathComponent:@"HyphenateSDK/video"];
+//            NSFileManager *fileManager = [NSFileManager defaultManager];
+//            BOOL isDir = YES;
+//            if (![fileManager fileExistsAtPath:filePath isDirectory:&isDir]) {
+//                [fileManager createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:nil];
+//            }
+//            [[EMCallRecorderPlugin sharedInstance] startVideoRecordingToFilePath:filePath error:nil];
+//        }];
+//        [alertController addAction:mixAction];
+//
+//        [alertController addAction: [UIAlertAction actionWithTitle:@"取消" style: UIAlertActionStyleCancel handler:nil]];
+//
+//        [self presentViewController:alertController animated:YES completion:nil];
+//    }
 }
 #endif
 

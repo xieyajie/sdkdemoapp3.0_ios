@@ -21,7 +21,7 @@
 #import "Call1v1VideoViewController.h"
 
 #ifdef DEBUG
-#import "EMCallRecorderPlugin.h"
+//#import "EMCallRecorderPlugin.h"
 #endif
 
 static DemoCallManager *callManager = nil;
@@ -87,7 +87,7 @@ static DemoCallManager *callManager = nil;
     
 #ifdef DEBUG
     //录制相关功能初始化
-    [EMCallRecorderPlugin initGlobalConfig];
+//    [EMCallRecorderPlugin initGlobalConfig];
 #endif
     
     NSString *file = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"calloptions.data"];

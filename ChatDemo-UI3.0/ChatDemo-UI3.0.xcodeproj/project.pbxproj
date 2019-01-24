@@ -13,8 +13,6 @@
 		3A031B4B21C7B22C00A8D7BB /* EMSDKOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A031B4A21C7B22C00A8D7BB /* EMSDKOptions.plist */; };
 		3A031B4E21C7C45800A8D7BB /* EMDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A031B4D21C7C45800A8D7BB /* EMDemoOptions.m */; };
 		3A03FE9F1E360BEE00DC1ABC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B1B9EE1C3B80290087A74F /* MessageUI.framework */; };
-		3A2AB3BC21E3459C00C68A63 /* libffmpeg-ios-full.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2AB3BA21E3459C00C68A63 /* libffmpeg-ios-full.a */; };
-		3A2AB3BD21E3459C00C68A63 /* libHyphenateAVRecorderPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2AB3BB21E3459C00C68A63 /* libHyphenateAVRecorderPlugin.a */; };
 		3A2C3A251E23AF5000DCD9BE /* EMChatroomAdminsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C3A1E1E23AF5000DCD9BE /* EMChatroomAdminsViewController.m */; };
 		3A2C3A261E23AF5000DCD9BE /* EMChatroomBansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C3A201E23AF5000DCD9BE /* EMChatroomBansViewController.m */; };
 		3A2C3A271E23AF5000DCD9BE /* EMChatroomMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C3A221E23AF5000DCD9BE /* EMChatroomMembersViewController.m */; };
@@ -56,6 +54,10 @@
 		3A42E45A21F9A14E00374C6C /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E45821F9A14E00374C6C /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A42E45E21F9A16F00374C6C /* Hyphenate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E45D21F9A16F00374C6C /* Hyphenate.framework */; };
 		3A42E45F21F9A16F00374C6C /* Hyphenate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E45D21F9A16F00374C6C /* Hyphenate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A42E46921F9A45100374C6C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E46821F9A45100374C6C /* libsqlite3.tbd */; };
+		3A42E46B21F9A49600374C6C /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB62A101D92636E000776F0 /* libiconv.tbd */; };
+		3A42E47321F9A7D700374C6C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E47121F9A7B200374C6C /* libc++.tbd */; };
+		3A42E47521F9A7F300374C6C /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E47421F9A7F300374C6C /* libresolv.tbd */; };
 		3A4BD04821E45AE500800BD4 /* EMRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BD04421E45AE500800BD4 /* EMRefreshTableViewController.m */; };
 		3A4BD04921E45AE500800BD4 /* EMRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4BD04621E45AE500800BD4 /* EMRefreshViewController.m */; };
 		3A595FAC1D6DBBD100504DB3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A595FAB1D6DBBD100504DB3 /* CoreTelephony.framework */; };
@@ -369,7 +371,6 @@
 		3C914D8419514BBD0002DAD3 /* GroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C914D7819514BBD0002DAD3 /* GroupListViewController.m */; };
 		3C914D8519514BBD0002DAD3 /* ContactSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C914D7A19514BBD0002DAD3 /* ContactSelectionViewController.m */; };
 		3C914D8619514BBD0002DAD3 /* CreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C914D7C19514BBD0002DAD3 /* CreateGroupViewController.m */; };
-		3CBB931C1A14B227007FED9E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBB931B1A14B227007FED9E /* libsqlite3.dylib */; };
 		3CBF90C019302F5000AD68AE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF90BF19302F5000AD68AE /* BaseViewController.m */; };
 		3CE6293319A1B13700829632 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE6293219A1B13700829632 /* CoreText.framework */; };
 		49E4E3A45FCF3BDF071C93C1 /* libPods-ChatDemo-UI3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF2608D48F688059FCF872C /* libPods-ChatDemo-UI3.0.a */; };
@@ -382,7 +383,6 @@
 		9003D9151939D8D000DC38A4 /* ApplyFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9003D8621939D8D000DC38A4 /* ApplyFriendCell.m */; };
 		9003D9161939D8D000DC38A4 /* ApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9003D8641939D8D000DC38A4 /* ApplyViewController.m */; };
 		9003D9181939D8D000DC38A4 /* RealtimeSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9003D8671939D8D000DC38A4 /* RealtimeSearchUtil.m */; };
-		902DEC551931D934006CA75E /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 902DEC541931D934006CA75E /* libresolv.dylib */; };
 		90517D671A5C3C1F008F1315 /* AppDelegate+EaseMob.m in Sources */ = {isa = PBXBuildFile; fileRef = 90517D661A5C3C1F008F1315 /* AppDelegate+EaseMob.m */; };
 		906083D91B71F894008574B4 /* EMRobotChatTextBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 906083D61B71F894008574B4 /* EMRobotChatTextBubbleView.m */; };
 		906083DA1B71F894008574B4 /* EMRotbotChatViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 906083D81B71F894008574B4 /* EMRotbotChatViewCell.m */; };
@@ -403,10 +403,8 @@
 		90EF2CED192F2B4E00BDC549 /* sr_refresh@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 90EF2CE6192F2B4E00BDC549 /* sr_refresh@2X.png */; };
 		90EF2CEE192F2B4E00BDC549 /* SRRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EF2CE9192F2B4E00BDC549 /* SRRefreshView.m */; };
 		90EF2CEF192F2B4E00BDC549 /* SRSlimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EF2CEB192F2B4E00BDC549 /* SRSlimeView.m */; };
-		90F1BECB1930491D00121AEC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F1BECA1930491C00121AEC /* libz.dylib */; };
 		90F1BECD1930492300121AEC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F1BECC1930492300121AEC /* CFNetwork.framework */; };
 		90F1BECF1930492B00121AEC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F1BECE1930492B00121AEC /* AddressBook.framework */; };
-		90F1BED11930493200121AEC /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F1BED01930493100121AEC /* libiconv.dylib */; };
 		90F1BED51930495800121AEC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F1BED41930495800121AEC /* MobileCoreServices.framework */; };
 		921C6A9E1D2A841600D8257F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921C6A9D1D2A841600D8257F /* CoreMotion.framework */; };
 		C035E8151AEA40F400283EE9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C36CA691A1EDB6200CDDD48 /* CoreData.framework */; };
@@ -476,7 +474,6 @@
 		D2F7691C1CBF3F26009778FB /* SearchMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F7691B1CBF3F26009778FB /* SearchMessageViewController.m */; };
 		D2F7691F1CBF42DB009778FB /* SearchChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F7691E1CBF42DB009778FB /* SearchChatViewController.m */; };
 		D2FFDB921C1687A30031425A /* ChatDemoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FFDB911C1687A30031425A /* ChatDemoHelper.m */; };
-		EB1975B21ADE0C77002E7E27 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1975B11ADE0C77002E7E27 /* libc++.dylib */; };
 		EBD2AB071A7CDAC000D16528 /* chatListCellHead.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD2AA3D1A7CDABF00D16528 /* chatListCellHead.png */; };
 		EBD2AB081A7CDAC000D16528 /* chatListCellHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD2AA3E1A7CDABF00D16528 /* chatListCellHead@2x.png */; };
 		EBD2AB391A7CDAC000D16528 /* call_out.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD2AA711A7CDABF00D16528 /* call_out.png */; };
@@ -579,11 +576,6 @@
 		3A031B4A21C7B22C00A8D7BB /* EMSDKOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EMSDKOptions.plist; sourceTree = "<group>"; };
 		3A031B4C21C7C45800A8D7BB /* EMDemoOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMDemoOptions.h; sourceTree = "<group>"; };
 		3A031B4D21C7C45800A8D7BB /* EMDemoOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMDemoOptions.m; sourceTree = "<group>"; };
-		3A27807A1DDB270200362CA7 /* libEaseUI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEaseUI.a; path = "../../emclient-ios/newSDK/DerivedData/emsdk/Build/Products/Debug-iphoneos/libEaseUI.a"; sourceTree = "<group>"; };
-		3A27807C1DDB271400362CA7 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHyphenateFullSDK.a; path = "../../emclient-ios/newSDK/DerivedData/emsdk/Build/Products/Debug-iphoneos/libHyphenateFullSDK.a"; sourceTree = "<group>"; };
-		3A2AB3AD21E3019A00C68A63 /* EMCallRecorderPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallRecorderPlugin.h; sourceTree = "<group>"; };
-		3A2AB3BA21E3459C00C68A63 /* libffmpeg-ios-full.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libffmpeg-ios-full.a"; path = "ChatDemo-UI3.0/Class/Call/plugin/libffmpeg-ios-full.a"; sourceTree = "<group>"; };
-		3A2AB3BB21E3459C00C68A63 /* libHyphenateAVRecorderPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHyphenateAVRecorderPlugin.a; path = "ChatDemo-UI3.0/Class/Call/plugin/libHyphenateAVRecorderPlugin.a"; sourceTree = "<group>"; };
 		3A2C3A1D1E23AF5000DCD9BE /* EMChatroomAdminsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomAdminsViewController.h; sourceTree = "<group>"; };
 		3A2C3A1E1E23AF5000DCD9BE /* EMChatroomAdminsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMChatroomAdminsViewController.m; sourceTree = "<group>"; };
 		3A2C3A1F1E23AF5000DCD9BE /* EMChatroomBansViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomBansViewController.h; sourceTree = "<group>"; };
@@ -650,15 +642,15 @@
 		3A32EFDE21D619D800B1F90E /* EMGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMGeneralViewController.m; sourceTree = "<group>"; };
 		3A32EFDF21D619D900B1F90E /* EMBlacklistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBlacklistViewController.m; sourceTree = "<group>"; };
 		3A32EFE021D619D900B1F90E /* EMAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAccountViewController.h; sourceTree = "<group>"; };
-		3A386F131DE557BA000F3D8E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		3A386F141DE557BA000F3D8E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		3A42E45821F9A14E00374C6C /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = "../../rtc-ios/RtcSDK/RtcSDK/3rdParth/webrtc/lib71/WebRTC.framework"; sourceTree = "<group>"; };
 		3A42E45D21F9A16F00374C6C /* Hyphenate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Hyphenate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A42E46821F9A45100374C6C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		3A42E47121F9A7B200374C6C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3A42E47421F9A7F300374C6C /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		3A4BD04421E45AE500800BD4 /* EMRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRefreshTableViewController.m; sourceTree = "<group>"; };
 		3A4BD04521E45AE500800BD4 /* EMRefreshViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRefreshViewController.h; sourceTree = "<group>"; };
 		3A4BD04621E45AE500800BD4 /* EMRefreshViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRefreshViewController.m; sourceTree = "<group>"; };
 		3A4BD04721E45AE500800BD4 /* EMRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRefreshTableViewController.h; sourceTree = "<group>"; };
-		3A595FA51D6D8EEB00504DB3 /* libEaseUI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEaseUI.a; path = "../../emclient-ios/newSDK/DerivedData/emsdk/Build/Products/Debug-iphonesimulator/libEaseUI.a"; sourceTree = "<group>"; };
 		3A595FAB1D6DBBD100504DB3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3A66253321BFD6AE0004F853 /* EMLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMLoginViewController.h; sourceTree = "<group>"; };
 		3A66253421BFD6AE0004F853 /* EMLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMLoginViewController.m; sourceTree = "<group>"; };
@@ -674,9 +666,6 @@
 		3A6764B31E5D2C6800ABF196 /* GroupSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSettingViewController.m; sourceTree = "<group>"; };
 		3A6764B51E5D3FB300ABF196 /* ChatroomDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatroomDetailViewController.h; sourceTree = "<group>"; };
 		3A6764B61E5D3FB300ABF196 /* ChatroomDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatroomDetailViewController.m; sourceTree = "<group>"; };
-		3A6FEF87218079100092EFA0 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = "../../rtc-ios/RtcSDK/RtcSDK/3rdParth/webrtc/WebRTC.framework"; sourceTree = "<group>"; };
-		3A7354472019F42900AB6CDB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = "ChatDemo-UI3.0/3rdparty/Fabric.framework"; sourceTree = "<group>"; };
-		3A7354482019F42900AB6CDB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = "ChatDemo-UI3.0/3rdparty/Crashlytics.framework"; sourceTree = "<group>"; };
 		3A807B051D9511B1004D18CB /* TTGlobalUICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGlobalUICommon.m; sourceTree = "<group>"; };
 		3A807B0D1D951301004D18CB /* EMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNavigationController.h; sourceTree = "<group>"; };
 		3A807B0E1D951301004D18CB /* EMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNavigationController.m; sourceTree = "<group>"; };
@@ -1110,15 +1099,12 @@
 		3AE752A2215A0DC60031B9A4 /* unchecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unchecked@3x.png"; sourceTree = "<group>"; };
 		3AE752A9215A4A0A0031B9A4 /* grid_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid_white@3x.png"; sourceTree = "<group>"; };
 		3AE752AA215A4A0A0031B9A4 /* grid_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid_white@2x.png"; sourceTree = "<group>"; };
-		3AECBA7A1E1B87EF0044D1B2 /* HyphenateVideoRecorder_CN.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HyphenateVideoRecorder_CN.framework; path = "../../emclient-ios/newSDK/DerivedData/emsdk/Build/Products/Release-iphoneos/HyphenateVideoRecorder_CN.framework"; sourceTree = "<group>"; };
-		3AECBA8E1E1BA7E40044D1B2 /* libHyphenateVideoRecorder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHyphenateVideoRecorder.a; path = "../../emclient-ios/newSDK/build/Release-iphoneos/libHyphenateVideoRecorder.a"; sourceTree = "<group>"; };
 		3AF6A6551E1F5BD40022E835 /* EMGroupMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMGroupMembersViewController.h; sourceTree = "<group>"; };
 		3AF6A6561E1F5BD40022E835 /* EMGroupMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMGroupMembersViewController.m; sourceTree = "<group>"; };
 		3AF6A6581E1F80570022E835 /* EMGroupBansViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMGroupBansViewController.h; sourceTree = "<group>"; };
 		3AF6A6591E1F80570022E835 /* EMGroupBansViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMGroupBansViewController.m; sourceTree = "<group>"; };
 		3AF6A65B1E1F84360022E835 /* EMGroupMutesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMGroupMutesViewController.h; sourceTree = "<group>"; };
 		3AF6A65C1E1F84360022E835 /* EMGroupMutesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMGroupMutesViewController.m; sourceTree = "<group>"; };
-		3AF848211DD07A7B00CB8BE9 /* Hyphenate_CN.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hyphenate_CN.framework; path = "../../emclient-ios/newSDK/DerivedData/emsdk/Build/Products/Debug-iphoneos/Hyphenate_CN.framework"; sourceTree = "<group>"; };
 		3AFDAE63201AE5780088D44E /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bugly.framework; path = "ChatDemo-UI3.0/3rdparty/Bugly.framework"; sourceTree = "<group>"; };
 		3C06AAFE194050A00076FF0B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3C06AB0219405D330076FF0B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -1150,14 +1136,12 @@
 		3C914D7A19514BBD0002DAD3 /* ContactSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactSelectionViewController.m; sourceTree = "<group>"; };
 		3C914D7B19514BBD0002DAD3 /* CreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateGroupViewController.h; sourceTree = "<group>"; };
 		3C914D7C19514BBD0002DAD3 /* CreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGroupViewController.m; sourceTree = "<group>"; };
-		3CBB931B1A14B227007FED9E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		3CBF90BE19302F5000AD68AE /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		3CBF90BF19302F5000AD68AE /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		3CE6293219A1B13700829632 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		3D7401AB3CCB68618262CD2C /* Pods-ChatDemo-UI3.0-jdpay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatDemo-UI3.0-jdpay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatDemo-UI3.0-jdpay/Pods-ChatDemo-UI3.0-jdpay.debug.xcconfig"; sourceTree = "<group>"; };
 		3EEDCE5B9CEC4FCA55263150 /* Pods-ChatDemo-UI3.0-jdpay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatDemo-UI3.0-jdpay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatDemo-UI3.0-jdpay/Pods-ChatDemo-UI3.0-jdpay.release.xcconfig"; sourceTree = "<group>"; };
 		4BF2608D48F688059FCF872C /* libPods-ChatDemo-UI3.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatDemo-UI3.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C63AFA13E65D7A990D76BFD /* libPods-ChatDemo-UI3.0-jdpay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatDemo-UI3.0-jdpay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		833E2D9C1DC723D600C5AB48 /* GettingMoreFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingMoreFooterView.h; sourceTree = "<group>"; };
 		833E2D9D1DC723D600C5AB48 /* GettingMoreFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GettingMoreFooterView.m; sourceTree = "<group>"; };
 		846D77031E6FA4DD0091DC94 /* EMCreateChatroomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCreateChatroomController.h; path = "ChatDemo-UI3.0/Class/Chatroom/EMCreateChatroomController.h"; sourceTree = SOURCE_ROOT; };
@@ -1176,7 +1160,6 @@
 		9003D8641939D8D000DC38A4 /* ApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyViewController.m; sourceTree = "<group>"; };
 		9003D8661939D8D000DC38A4 /* RealtimeSearchUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealtimeSearchUtil.h; sourceTree = "<group>"; };
 		9003D8671939D8D000DC38A4 /* RealtimeSearchUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealtimeSearchUtil.m; sourceTree = "<group>"; };
-		902DEC541931D934006CA75E /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 		90517D651A5C3C1F008F1315 /* AppDelegate+EaseMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+EaseMob.h"; sourceTree = "<group>"; };
 		90517D661A5C3C1F008F1315 /* AppDelegate+EaseMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+EaseMob.m"; sourceTree = "<group>"; };
 		905326B319333E8E00F064D7 /* TTGlobalUICommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGlobalUICommon.h; sourceTree = "<group>"; };
@@ -1216,11 +1199,8 @@
 		90EF2CE9192F2B4E00BDC549 /* SRRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRefreshView.m; sourceTree = "<group>"; };
 		90EF2CEA192F2B4E00BDC549 /* SRSlimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSlimeView.h; sourceTree = "<group>"; };
 		90EF2CEB192F2B4E00BDC549 /* SRSlimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSlimeView.m; sourceTree = "<group>"; };
-		90F1BECA1930491C00121AEC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		90F1BECC1930492300121AEC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		90F1BECE1930492B00121AEC /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		90F1BED01930493100121AEC /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
-		90F1BED21930493F00121AEC /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		90F1BED41930495800121AEC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		921C6A9D1D2A841600D8257F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		D24A4A9B1BCE4B830007BB00 /* ChatDemo-UI3.0-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ChatDemo-UI3.0-Info.plist"; sourceTree = "<group>"; };
@@ -1308,9 +1288,7 @@
 		D2FFDB901C1687A30031425A /* ChatDemoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDemoHelper.h; sourceTree = "<group>"; };
 		D2FFDB911C1687A30031425A /* ChatDemoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDemoHelper.m; sourceTree = "<group>"; };
 		D3C39570339FF343A13FC8AD /* Pods-ChatDemo-UI3.0-JDPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatDemo-UI3.0-JDPay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatDemo-UI3.0-JDPay/Pods-ChatDemo-UI3.0-JDPay.debug.xcconfig"; sourceTree = "<group>"; };
-		D6E3F8F563A890669766AA3C /* libPods-ChatDemo-UI3.0-JDPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatDemo-UI3.0-JDPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E121EEBE7134566FC8E14C2E /* Pods-ChatDemo-UI3.0-JDPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatDemo-UI3.0-JDPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatDemo-UI3.0-JDPay/Pods-ChatDemo-UI3.0-JDPay.release.xcconfig"; sourceTree = "<group>"; };
-		EB1975B11ADE0C77002E7E27 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		EBD2AA3D1A7CDABF00D16528 /* chatListCellHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatListCellHead.png; sourceTree = "<group>"; };
 		EBD2AA3E1A7CDABF00D16528 /* chatListCellHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatListCellHead@2x.png"; sourceTree = "<group>"; };
 		EBD2AA711A7CDABF00D16528 /* call_out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = call_out.png; sourceTree = "<group>"; };
@@ -1382,7 +1360,6 @@
 		EBD2AAFE1A7CDAC000D16528 /* tabbarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarBackground@2x.png"; sourceTree = "<group>"; };
 		EBD2AAFF1A7CDAC000D16528 /* tabbarSelectBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarSelectBg.png; sourceTree = "<group>"; };
 		EBD2AB001A7CDAC000D16528 /* tabbarSelectBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarSelectBg@2x.png"; sourceTree = "<group>"; };
-		EBF9556B1ADD0F0C0087E035 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		EBF955E21ADD17700087E035 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -1391,8 +1368,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2AB3BC21E3459C00C68A63 /* libffmpeg-ios-full.a in Frameworks */,
-				3A2AB3BD21E3459C00C68A63 /* libHyphenateAVRecorderPlugin.a in Frameworks */,
+				3A42E47521F9A7F300374C6C /* libresolv.tbd in Frameworks */,
+				3A42E47321F9A7D700374C6C /* libc++.tbd in Frameworks */,
+				3A42E46B21F9A49600374C6C /* libiconv.tbd in Frameworks */,
+				3A42E46921F9A45100374C6C /* libsqlite3.tbd in Frameworks */,
 				3AFDAE65201AE58F0088D44E /* Security.framework in Frameworks */,
 				3A9A29F721709ECC00AC4689 /* libopencore-amrnb.a in Frameworks */,
 				3AFDAE64201AE5780088D44E /* Bugly.framework in Frameworks */,
@@ -1403,20 +1382,15 @@
 				D29A6BB61B7209C8002324BB /* Social.framework in Frameworks */,
 				D29A6BB51B7209C1002324BB /* Accounts.framework in Frameworks */,
 				C035E8151AEA40F400283EE9 /* CoreData.framework in Frameworks */,
-				EB1975B21ADE0C77002E7E27 /* libc++.dylib in Frameworks */,
-				3CBB931C1A14B227007FED9E /* libsqlite3.dylib in Frameworks */,
 				3CE6293319A1B13700829632 /* CoreText.framework in Frameworks */,
 				3C1CEF7F196EA37600DBA56B /* ImageIO.framework in Frameworks */,
 				3C06AB0319405D330076FF0B /* MapKit.framework in Frameworks */,
 				3C06AAFF194050A00076FF0B /* CoreLocation.framework in Frameworks */,
-				902DEC551931D934006CA75E /* libresolv.dylib in Frameworks */,
 				3C3527451931D37900385240 /* SystemConfiguration.framework in Frameworks */,
 				90F1BED51930495800121AEC /* MobileCoreServices.framework in Frameworks */,
 				D29A6BB21B72098D002324BB /* Bolts.framework in Frameworks */,
-				90F1BED11930493200121AEC /* libiconv.dylib in Frameworks */,
 				90F1BECF1930492B00121AEC /* AddressBook.framework in Frameworks */,
 				90F1BECD1930492300121AEC /* CFNetwork.framework in Frameworks */,
-				90F1BECB1930491D00121AEC /* libz.dylib in Frameworks */,
 				9091102C192EEA70008A48AA /* UIKit.framework in Frameworks */,
 				D29A6BB31B72098D002324BB /* Parse.framework in Frameworks */,
 				3A42E45E21F9A16F00374C6C /* Hyphenate.framework in Frameworks */,
@@ -1440,14 +1414,6 @@
 				846D77041E6FA4DD0091DC94 /* EMCreateChatroomController.m */,
 			);
 			path = Chatroom;
-			sourceTree = "<group>";
-		};
-		3A2AB3AC21E3019A00C68A63 /* plugin */ = {
-			isa = PBXGroup;
-			children = (
-				3A2AB3AD21E3019A00C68A63 /* EMCallRecorderPlugin.h */,
-			);
-			path = plugin;
 			sourceTree = "<group>";
 		};
 		3A2C3A1C1E23AF5000DCD9BE /* Info */ = {
@@ -1567,7 +1533,6 @@
 		3A386E881DE5539C000F3D8E /* Call */ = {
 			isa = PBXGroup;
 			children = (
-				3A2AB3AC21E3019A00C68A63 /* plugin */,
 				3ACFCD3921524B18009F488D /* CallImages */,
 				3A2F293421537E7E00F86EB5 /* Tools */,
 				3A2F292D21537E7E00F86EB5 /* 1v1 */,
@@ -2634,31 +2599,14 @@
 		90911026192EEA70008A48AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3A2AB3BA21E3459C00C68A63 /* libffmpeg-ios-full.a */,
-				3A2AB3BB21E3459C00C68A63 /* libHyphenateAVRecorderPlugin.a */,
-				3A6FEF87218079100092EFA0 /* WebRTC.framework */,
+				3A42E47421F9A7F300374C6C /* libresolv.tbd */,
+				3A42E47121F9A7B200374C6C /* libc++.tbd */,
+				3A42E46821F9A45100374C6C /* libsqlite3.tbd */,
 				3AC0B87C21F853A2008B98A3 /* WebRTC.framework */,
 				3AFDAE63201AE5780088D44E /* Bugly.framework */,
-				3A7354482019F42900AB6CDB /* Crashlytics.framework */,
-				3A7354472019F42900AB6CDB /* Fabric.framework */,
-				3AECBA8E1E1BA7E40044D1B2 /* libHyphenateVideoRecorder.a */,
-				3AECBA7A1E1B87EF0044D1B2 /* HyphenateVideoRecorder_CN.framework */,
-				3A386F131DE557BA000F3D8E /* Crashlytics.framework */,
-				3A386F141DE557BA000F3D8E /* Fabric.framework */,
-				EB1975B11ADE0C77002E7E27 /* libc++.dylib */,
-				EBF9556B1ADD0F0C0087E035 /* libstdc++.6.0.9.dylib */,
-				3CBB931B1A14B227007FED9E /* libsqlite3.dylib */,
-				902DEC541931D934006CA75E /* libresolv.dylib */,
-				90F1BED21930493F00121AEC /* libstdc++.dylib */,
-				90F1BED01930493100121AEC /* libiconv.dylib */,
-				90F1BECA1930491C00121AEC /* libz.dylib */,
 				3AB62A121D926375000776F0 /* libbz2.tbd */,
 				3AB62A101D92636E000776F0 /* libiconv.tbd */,
 				3AB62A0E1D926341000776F0 /* libz.tbd */,
-				3A27807C1DDB271400362CA7 /* libHyphenateFullSDK.a */,
-				3A27807A1DDB270200362CA7 /* libEaseUI.a */,
-				3A595FA51D6D8EEB00504DB3 /* libEaseUI.a */,
-				3AF848211DD07A7B00CB8BE9 /* Hyphenate_CN.framework */,
 				3A595FAB1D6DBBD100504DB3 /* CoreTelephony.framework */,
 				921C6A9D1D2A841600D8257F /* CoreMotion.framework */,
 				D2B1B9EE1C3B80290087A74F /* MessageUI.framework */,
@@ -2681,8 +2629,6 @@
 				90911029192EEA70008A48AA /* CoreGraphics.framework */,
 				9091102B192EEA70008A48AA /* UIKit.framework */,
 				4BF2608D48F688059FCF872C /* libPods-ChatDemo-UI3.0.a */,
-				5C63AFA13E65D7A990D76BFD /* libPods-ChatDemo-UI3.0-jdpay.a */,
-				D6E3F8F563A890669766AA3C /* libPods-ChatDemo-UI3.0-JDPay.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
