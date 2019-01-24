@@ -67,7 +67,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>环信Demo需要使用您的相机</string>
+	<string>环信Demo需要在扫描二维码或者拍照录制时使用您的相机</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>环信Demo需要使用您的位置信息</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
